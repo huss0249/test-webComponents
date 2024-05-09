@@ -1,0 +1,14 @@
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    /* height: 600px; */
+    background: yellow;
+}
+
+.copyright {
+    background: red;
+    display: block;
+    height: 40px;
+}
