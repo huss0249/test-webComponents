@@ -15,6 +15,7 @@ template.innerHTML = `
         position: relative;
         padding: 1rem;
       }
+      /*
       .character{
         position: absolute;
         z-index: 10;
@@ -24,10 +25,11 @@ template.innerHTML = `
         line-height:1;
         color: hsla(60, 50%, 80%, 0.32);
       }
+      */
       
     </style>
     <div class="root">
-      <h1>Big Bang Theory</h1>
+      <h1>Head</h1>
       <slot name="title">Default text if not title slot used in HTML</slot>
     </div>
 `;
@@ -42,41 +44,41 @@ class Head extends HTMLElement {
   }
 
   //define the allowed attributes
-  static get observedAttributes() {
-    return ['character', 'color'];
-  }
+  // static get observedAttributes() {
+  //   return ['character', 'color'];
+  // }
   //
   //sync attributes with properties as you want
-  get character() {
-    return this.getAttribute('character');
-  }
-  set character(value) {
-    this.setAttribute('character', value);
-  }
+  // get character() {
+  //   return this.getAttribute('character');
+  // }
+  // set character(value) {
+  //   this.setAttribute('character', value);
+  // }
 
-  get color() {
-    return this.getAttribute('color');
-  }
-  set color(value) {
-    this.setAttribute('color', value);
-  }
+  // get color() {
+  //   return this.getAttribute('color');
+  // }
+  // set color(value) {
+  //   this.setAttribute('color', value);
+  // }
   //
   //handle values and changes to the attributes
-  attributeChangedCallback(attrName, oldVal, newVal) {
-    if (attrName.toLowerCase() === 'character') {
-      const div = this.root.querySelector('.root');
-      let p = div.querySelector('p')
-        ? div.querySelector('p')
-        : document.createElement('p');
-      p.className = 'character';
-      p.textContent = newVal;
-      div.append(p);
-    }
-    console.log(attrName, newVal);
-    if (attrName.toLowerCase() === 'color') {
-      this.style.backgroundColor = newVal;
-    }
-  }
+  // attributeChangedCallback(attrName, oldVal, newVal) {
+  //   if (attrName.toLowerCase() === 'character') {
+  //     const div = this.root.querySelector('.root');
+  //     let p = div.querySelector('p')
+  //       ? div.querySelector('p')
+  //       : document.createElement('p');
+  //     p.className = 'character';
+  //     p.textContent = newVal;
+  //     div.append(p);
+  //   }
+  //   console.log(attrName, newVal);
+  //   if (attrName.toLowerCase() === 'color') {
+  //     this.style.backgroundColor = newVal;
+  //   }
+  // }
 }
 
 customElements.define('big-head', Head);

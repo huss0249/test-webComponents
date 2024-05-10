@@ -1,14 +1,38 @@
+body {
+    margin: 0;
+    display: flex;
+}
+
 #app {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
     gap: 2rem;
     /* height: 600px; */
-    background: yellow;
+    background: #ccc;
+    margin: 0;
+    width: 100%;
 }
 
-.copyright {
-    background: red;
+/* .copyright {
+    background: red !important;
     display: block;
     height: 40px;
+} */
+
+
+big-head {
+    background: red;
+}
+
+big-main {
+    margin-bottom: auto;
+    height: auto;
+    min-height: 600px;
+}
+
+big-foot {
+    justify-self: end;
+    margin-top: auto;
+    height: 100px;
 }

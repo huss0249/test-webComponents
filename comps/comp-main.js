@@ -27,7 +27,7 @@ template.innerHTML = `
       
     </style>
     <div class="root">
-      <h1>Big Bang Theory</h1>
+      <h1>Main</h1>
       <slot name="title">Default text if not title slot used in HTML</slot>
     </div>
 `;
